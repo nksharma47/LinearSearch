@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main() 
+int main(void) 
 {
-	int a[10],n,key,i;
+	int a[10],n,key,i,count=0;
 	printf("Enter size of arrray: ");
 	scanf("%d",&n);
 	
@@ -14,13 +14,17 @@ int main()
 	
 	for(i=0;i<n;i++)
 	{
+	    count++;
 	    if(a[i]==key)
 	    {
 	        printf("Found at %d\n",i+1);
+	        printf("OPERATION COUNT=%d\n",count);
 	        exit(0);
 	    }
 	}
 	printf("Not Found\n");
+	printf("OPERATION COUNT = %d\n",count);
 	
 	return 0;
 }
+
